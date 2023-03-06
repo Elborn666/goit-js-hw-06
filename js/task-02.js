@@ -7,32 +7,15 @@ const ingredients = [
   'Condiments',
 ];
 
-const newElPotatoes = document.createElement('li')
-newElPotatoes.textContent = 'Potatoes'
-newElPotatoes.classList.add('item')
-document.body.append(newElPotatoes)
+const ingredientsRef = document.querySelector('#ingredients');
 
-const newElMushrooms = document.createElement('li')
-newElMushrooms.textContent = 'Mushrooms'
-newElMushrooms.classList.add('item')
-document.body.append(newElMushrooms)
+const itemsRef = ingredients.map((ingredient) => {
+  const item = document.createElement('li');
+  item.textContent = ingredient;
+  item.classList.add('item');
+  return item;
+});
+ingredientsRef.append(...itemsRef);
+console.log(itemsRef)
 
-const newElGarlic = document.createElement('li')
-newElGarlic.textContent = 'Garlic'
-newElGarlic.classList.add('item')
-document.body.append(newElGarlic)
 
-const newElTomatos = document.createElement('li')
-newElTomatos.textContent = 'Tomatos'
-newElTomatos.classList.add('item')
-document.body.append(newElTomatos)
-
-const newElHerbs = document.createElement('li')
-newElHerbs.textContent = 'Herbs'
-newElHerbs.classList.add('item')
-document.body.append(newElHerbs)
-
-const newElCondiments = document.createElement('li')
-newElCondiments.textContent = 'Condiments'
-newElCondiments.classList.add('item')
-document.body.append(newElCondiments)
