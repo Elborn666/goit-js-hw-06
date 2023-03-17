@@ -8,13 +8,13 @@ function onBlurBorderColor(event) {
         formInput.classList.add('valid');
         formInput.classList.remove('invalid');
       }
-      if (formInput.value.length === 0) {
+      if (!formInput.value.length ) {
         formInput.classList.remove('valid');
         formInput.classList.remove('invalid');
       }
       if (
         formInput.value.length !== Number(formInput.dataset.length) &&
-        formInput.value.length !== 0
+        formInput.value.length
       ) {
         formInput.classList.add('invalid');
       }
