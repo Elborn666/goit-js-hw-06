@@ -14,7 +14,7 @@ function handleSubmit(event) {
 const emailRef = event.currentTarget.elements.email;
 const paswRef = event.currentTarget.elements.password;
 
-if (emailRef.value === '' || paswRef.value === ''){
+if (!emailRef.value || !paswRef.value){
     return alert('Заповніть всі поля')
 } else {
     elem.emailRef = emailRef.value
